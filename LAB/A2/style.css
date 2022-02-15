@@ -1,0 +1,28 @@
+
+a {
+    background-color:greenyellow;
+    transition: background-color .10s;
+    
+  }
+  a:hover {
+    background-color: red;
+  }
+
+  a {
+    background-color:greenyellow;
+    transition: background-color .10s;
+    
+  }
+  a:hover {
+    background-color: red;
+  }
+
+  .a {
+    background-image: url(https://billsberryfarm.com/wp-content/uploads/2020/08/peach.png);
+  }
+  
+  .b {
+    background-image: url(https://billsberryfarm.com/wp-content/uploads/2020/08/peach.png);
+  }
+
+
