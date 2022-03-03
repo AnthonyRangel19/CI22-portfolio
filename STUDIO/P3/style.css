@@ -1,37 +1,96 @@
-h1:hover {
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 2px black;
+.floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+font-size: 10px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient( -45deg, #4117ff, #E73C7E, #68dbf5, #b81c86);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 7s ease-in-out infinite;
+}
+
+h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    padding: 2rem;
+}
+
+h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+}
+
+h3{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+}
+
+h4{
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+}
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
     }
-    :root{
-        --overlay-color-1: #ff0000;
-        --overlay-color-2: #0000ff;
-        --anim-duration: 2s;
+    50%{
+        background-position: 100% 50%;
     }
-    
-    #gradient {
-        opacity: 0.8;
-        background: none;
+    100%{
+        background-position: 0 50%;
     }
-    
-    #gradient:after,
-    #gradient:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0; bottom: 0; left: 0; right: 0;
-    }
-    
-    #gradient:before {
-        background: linear-gradient(135deg, var(--overlay-color-2) 0%, var(--overlay-color-1) 100%);
-        animation: OpacityAnim var(--anim-duration) ease-in-out 0s infinite alternate;
-    }
-    
-    #gradient:after {
-        background: linear-gradient(135deg, var(--overlay-color-1) 0%, var(--overlay-color-2) 100%);
-        animation: OpacityAnim var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
-    }
-    
-    @keyframes OpacityAnim {
-        0%{opacity: 1.0}
-        100%{opacity: 0.0}
-    }
+
+
+
