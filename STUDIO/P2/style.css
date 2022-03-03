@@ -1,9 +1,22 @@
+section{
+    width: 100%;
+    height: 100vh;
+    color: rgb(254, 255, 221);
+    background: linear-gradient( -45deg, #fffb04, #1d0c02, #c71a07, #534d0a);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 7s ease-in-out infinite;
+}
+
 .floating { 
+    position:absolute;
+    top: 10px;
+    left: 10px;
     animation-name: floating;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 30px;
+    margin-left: 60px;
     margin-top: 5px;
 }
  
@@ -25,30 +38,46 @@ font-family: Arial, Helvetica, sans-serif;
 
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    background: linear-gradient( -45deg, #4117ff, #E73C7E, #68dbf5, #b81c86);
-    background-size: 400% 400%;
-    position: relative;
-    animation: change 7s ease-in-out infinite;
-}
+
 
 h1{
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 0px;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+    /*width: 100%;
+    height: 100%;*/
+    bottom: 10px;
     left: 0;
     transform: rotateY(180deg);
     padding: 2rem;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+p{
+    font-size:16px;
+    position:absolute;
+    bottom:80px;
+    left:20px;
+    color:white;
+    opacity:0%; 
+    
+}
+p:active{
+    animation-name: appear;
+    animation-duration: 4s;
+}
+@keyframes appear {
+    0% { opacity:25%; transform: translate(0,  0px); }
+    50%  { opacity:50%; transform: translate(0,  -15px);}
+    100%   {opacity:100%; transform: translate(0,  -30px);}   
 }
 
+
 h2{
+    float: left;
     font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 0px;
@@ -91,6 +120,13 @@ h4{
     100%{
         background-position: 0 50%;
     }
+}
 
 
-
+.float { 
+    width: 100px;
+    height: 181px;
+    position: absolute;
+    top:0px;
+    left: 500px;
+}
